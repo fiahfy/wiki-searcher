@@ -27,9 +27,11 @@ Feature
 Install
 ---------
 
-    $ git clone xxx
-    $ cd xxx
-    $ npm install
+```
+git clone https://github.com/fiahfy/wiki-searcher.git
+cd wiki-searcher
+npm install
+```
 
 * Open <chrome://extensions/>.
 * Drag & drop `app` directory.
