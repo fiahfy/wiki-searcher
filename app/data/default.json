@@ -1,0 +1,6 @@
+[{
+	"name": "Wikipedia, the free encyclopedia",
+	"search": "http://en.wikipedia.org/w/index.php?search=##query##",
+	"type": "MediaWiki",
+	"url": "http://en.wikipedia.org/"
+}]

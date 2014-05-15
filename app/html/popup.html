@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<script src="../libs/jquery/jquery.js"></script>
+	<script src="../libs/angular/angular.js"></script>
+	<script src="../libs/bootstrap/bootstrap.js"></script>
+	<link href="../libs/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- build:js ../js/app.min.js -->
+	<script src="../js/app.js"></script>
+	<script src="../js/controllers.js"></script>
+	<script src="../js/directives.js"></script>
+	<script src="../js/filters.js"></script>
+	<script src="../js/services.js"></script>
+	<!-- endbuild -->
+	<script src="../js/analytics.js"></script>
+	<!-- build:css ../css/app.min.css -->
+	<link href="../css/app.css" rel="stylesheet">
+	<!-- endbuild -->
+</head>
+<body id="popup" ng-controller="PopupMainCtrl" class="container">
+	<form class="form-inline" ng-submit='search();'>
+		<input class="form-control" type="search" name="query" placeholder="Enter Keywords." ng-model="query" />
+		<select class="form-control" ng-model="wiki" ng-options="wiki.name for wiki in wikis | orderBy:'name'" ng-change="search();"></select>
+	</form>
+	<div ng-switch on="status">
+		<span ng-switch-when="registered">This site is registered</span>
+		<a ng-switch-when="registerable" ng-click="insert();" href="#"  data-loading-text="Loading..." loading="{{loading}}">Register this site</a>
+		<a ng-click="openOption();" href="#">Option</a>
+	</div>
+</body>
+</html>

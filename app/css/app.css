@@ -1,0 +1,67 @@
+@charset 'utf-8';
+
+/* options */
+body#options {
+	padding: 15px 15px;
+}
+
+#options input[type=url] {
+	width: 300px;
+}
+
+#options .register {
+	padding-bottom: 15px;
+}
+
+#options .form-inline select.form-control {
+	display: inline-block;
+	width: auto;
+	*font-size: 12px;
+}
+
+#options table.table>tbody>tr>td {
+	vertical-align: middle;
+	white-space: nowrap;
+}
+#options table>tbody>tr>td.url {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 300px;
+}
+#options table>tbody>tr>td.w1 {
+	width: 1%;
+}
+
+/* popup */
+body#popup {
+	padding: 10px 15px;
+}
+
+#popup form {
+	white-space: nowrap;
+}
+
+#popup form span {
+	font-size: 18px;
+	line-height: 34px;
+	height: 34px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#popup .form-inline .form-control {
+	display: inline-block;
+	width: auto;
+	*font-size: 12px;
+}
+
+#popup div {
+	margin-top: 5px;
+	text-align: right;
+}
+#popup div > span, div > a {
+	margin-left: 5px;
+}
+#popup div > span {
+	color: #ccc;
+}
