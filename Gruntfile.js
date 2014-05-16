@@ -69,10 +69,8 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'app',
-          dest: 'dist',
-          src: [
-            '**'
-          ]
+          src: '**',
+          dest: 'dist'
         }]
       }
     },
@@ -109,9 +107,25 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'dist/html',
-          src: ['**.html'],
+          src: '**.html',
           dest: 'dist/html'
         }]
+      }
+    },
+
+    usebanner: {
+      dist: {
+        options: {
+          position: 'top',
+          banner: '/**\n'
+                + ' * @license <%= pkg.name %> v<%= pkg.version %>\n'
+                + '<%= pkg.author && pkg.homepage ? " * (c) " + grunt.template.today("yyyy") + " " + pkg.author.name + " " + pkg.homepage + "\\n" : "" %>'
+                + '<%= pkg.licenses ? " * License: " + _.pluck(pkg.licenses, "type").join(", ") + "\\n" : "" %>'
+                + ' */'
+        },
+        files: {
+          src: ['dist/css/**.css', 'dist/js/**.js']
+        }
       }
     },
 
@@ -168,6 +182,7 @@ module.exports = function (grunt) {
 //    'rev',
     'usemin',
     'htmlmin',
+    'usebanner',
     'shell:archive'
   ]);
 
