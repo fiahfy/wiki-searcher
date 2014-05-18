@@ -20,8 +20,8 @@
 </head>
 <body id="popup" ng-controller="PopupMainCtrl" class="container">
 	<form class="form-inline" ng-submit='search();'>
-		<input class="form-control" type="search" name="query" placeholder="Enter Keywords." ng-model="query" />
-		<select class="form-control" ng-model="wiki" ng-options="wiki.name for wiki in wikis | orderBy:'name'" ng-change="search();"></select>
+		<input class="form-control" type="search" name="query" placeholder="Enter Keywords." ng-model="query" /><!--
+		--><select class="form-control" ng-model="wiki" ng-options="wiki.name for wiki in wikis | orderBy:'name'" ng-change="search();"></select>
 	</form>
 	<div ng-switch on="status">
 		<span ng-switch-when="registered">This site is registered</span>

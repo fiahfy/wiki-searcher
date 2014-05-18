@@ -28,7 +28,7 @@ controllers.controller('PopupMainCtrl', ['$scope', 'WikiService', function($scop
 		for (var i in $scope.wikis)
 		{
 			var wiki = $scope.wikis[i];
-			if (wiki.default || i===0) {
+			if (wiki.default || parseInt(i)===0) {
 				$scope.wiki = wiki;
 			}
 		}
